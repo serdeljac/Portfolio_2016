@@ -26,7 +26,7 @@
 			<button ng-class="{active: panel.isSelected(1)}" ng-click="panel.selectTab(1)" class=" btn" id="home" type="submit">Home</button>
 			<button ng-class="{active: panel.isSelected(2)}" ng-click="panel.selectTab(2)" class="btn" id="skills" type="submit" >Skills</button>
 			<button ng-class="{active: panel.isSelected(3)}" ng-click="panel.selectTab(3)" class="btn" type="submit">Projects</button>
-			<a href="" ng-click="panel.selectTab(1)" class="logo"><img src="img/logo.jpg" /></a>
+			<a href="" ng-click="panel.selectTab(1)" class="logo"><img src="img/logo.jpg" alt="Logo" /></a>
 			<button ng-class="{active: panel.isSelected(4)}" ng-click="panel.selectTab(4)" class="btn" type="submit">About</button>
 			<button ng-class="{active: panel.isSelected(5)}" ng-click="panel.selectTab(5)" class="btn" type="submit">Contact</button>
 		</nav>
@@ -45,63 +45,63 @@
 				<table id="skills-tbl" class="table table-hover">
 					<tr>
 						<td>HTML5</td>
-						<td><img src="img/progress.png" class="prg-html5" /></td>
+						<td><img src="img/progress.png" class="prg-html5" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>XML/XSLT</td>
-						<td><img src="img/progress.png" class="prg-xml" /></td>
+						<td><img src="img/progress.png" class="prg-xml" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>CSS3</td>
-						<td><img src="img/progress.png" class="prg-css3" /></td>
+						<td><img src="img/progress.png" class="prg-css3" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td class="skill-sub">Bootstrap</td>
-						<td><img src="img/progress.png" class="prg-bootstrap" /></td>
+						<td><img src="img/progress.png" class="prg-bootstrap" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>JavaScript</td>
-						<td><img src="img/progress.png" class="prg-javascript" /></td>
+						<td><img src="img/progress.png" class="prg-javascript" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td class="skill-sub">jQuery</td>
-						<td><img src="img/progress.png" class="prg-jquery" /></td>
+						<td><img src="img/progress.png" class="prg-jquery" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td class="skill-sub">AngularJS</td>
-						<td><img src="img/progress.png" class="prg-angularjs" /></td>
+						<td><img src="img/progress.png" class="prg-angularjs" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>PHP</td>
-						<td><img src="img/progress.png" class="prg-php" /></td>
+						<td><img src="img/progress.png" class="prg-php" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>Adobe Photoshop</td>
-						<td><img src="img/progress.png" class="prg-photoshop" /></td>
+						<td><img src="img/progress.png" class="prg-photoshop" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>Microsoft Office</td>
-						<td><img src="img/progress.png" class="prg-office" /></td>
+						<td><img src="img/progress.png" class="prg-office" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>GitHub</td>
-						<td><img src="img/progress.png" class="prg-github" /></td>
+						<td><img src="img/progress.png" class="prg-github" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>Wordpress</td>
-						<td><img src="img/progress.png" class="prg-wordpress" /></td>
+						<td><img src="img/progress.png" class="prg-wordpress" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>Windows 7, 8.1, 10</td>
-						<td><img src="img/progress.png" class="prg-windows" /></td>
+						<td><img src="img/progress.png" class="prg-windows" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>MacOSX 10.10</td>
-						<td><img src="img/progress.png" class="prg-mac" /></td>
+						<td><img src="img/progress.png" class="prg-mac" alt="prg" /></td>
 					</tr>
 					<tr>
 						<td>Ubuntu 14.04</td>
-						<td><img src="img/progress.png" class="prg-ubuntu" /></td>
+						<td><img src="img/progress.png" class="prg-ubuntu" alt="prg" /></td>
 					</tr>
 				</table>
 				
@@ -126,21 +126,22 @@
 			<section ng-show="panel.tab === 3" class="projects" ng-controller="ProjectController as project">
 				
 				<div class="project-list">
-					<img src="img/clickabove.png" />
-						<a href="" ng-class="{active: project.isSelected(1)}" ng-click="project.selectTab(1)">Off Campus Media</a>
-						<a href="" ng-class="{active: project.isSelected(2)}" ng-click="project.selectTab(2)">Group Final Project</a>
-						<a href="" ng-class="{active: project.isSelected(3)}" ng-click="project.selectTab(3)">Javascript Matching Game</a>
-						<a href="" ng-class="{active: project.isSelected(4)}" ng-click="project.selectTab(4)">Spencer Soares Portal</a>
-						<a href="" ng-class="{active: project.isSelected(5)}" ng-click="project.selectTab(5)">LiveMuse Simulation App</a>
-						<a href="" ng-class="{active: project.isSelected(6)}" ng-click="project.selectTab(6)">My portfolio (2015)</a>
+					<img src="img/clickabove.png" alt="Click Below" />
+					<a href="" ng-class="{active: project.isSelected(1)}" ng-click="project.selectTab(1)">Off Campus Media</a>
+					<a href="" ng-class="{active: project.isSelected(2)}" ng-click="project.selectTab(2)">Group Final Project</a>
+					<a href="" ng-class="{active: project.isSelected(3)}" ng-click="project.selectTab(3)">Javascript Matching Game</a>
+					<a href="" ng-class="{active: project.isSelected(4)}" ng-click="project.selectTab(4)">Spencer Soares Portal</a>
+					<a href="" ng-class="{active: project.isSelected(5)}" ng-click="project.selectTab(5)">LiveMuse Simulation App</a>
+					<a href="" ng-class="{active: project.isSelected(6)}" ng-click="project.selectTab(6)">My portfolio (2015)</a>
+					<a href="" ng-class="{active: project.isSelected(7)}" ng-click="project.selectTab(7)">My portfolio (2016) <span>*new</span></a>
 				</div>
 				
 				<div class="project-display">
-					<h2 class="sec-title">Projects</h2>
+					<h2 class="sec-title">PROJECTS</h2>
 
 					<!-- OFFCAMPUS MEDIA -->
 					<div ng-show="project.tab === 1">
-						<img src="img/offcampus.jpg" />
+						<img src="img/offcampus.jpg" alt="Off Campus" />
 						<p>My first website using all the basics of HTML, CSS, and PHP. The key purpose is to 
 						learn effective use of proper scripting, and the use of a variety of CSS3 attributes to make 
 						a presentable web page.</p>
@@ -213,42 +214,96 @@
 						<hr />
 						<ul>
 							<li><a href="http://portfolio2015.serdeljac.com" target="_blank">View the site</a></li>
-							<li><a href="https://github.com/serdeljac/Spencer_Portal_Site" target="_blank">Download from GitHub</a></li>
+							<li><a href="https://github.com/serdeljac/Portfolio_2015" target="_blank">Download from GitHub</a></li>
 						</ul>
 					</div>
 					
-					
-					
+					<!-- PORTFOLIO SITE 2016 -->
+					<div ng-show="project.tab === 7">
+						<img src="img/portfolio2016.jpg" alt="Portfolio 2016" />
+						<p>Current portfolio project that uses angularJS and Bootstrap. Compared to my 2015 
+						version, I have added more details on my work and optimized the images further for 
+						quick loading. Also thanks to Bootstrap and some of my own CSS @media features, I 
+						have made my site more responsive to various devices.</p>
+						<hr />
+						<ul>
+							<li><a href="https://github.com/serdeljac/Portfolio_2016" target="_blank">Download from GitHub</a></li>
+						</ul>
+					</div>
+
 				</div>
 			</section>
 			
 			<section ng-show="panel.tab === 4" class="about">
 				<img src="img/stjepan.jpg" alt="profile" />
 				<h2 class="sec-title">Stjepan Josip Erdeljac</h2>
-				
 				<p>Keeping it simple, I'm a teck geek who loves custom, dynamic computer systems &amp; interfaces and desires to 
 				express myself in relation to web technologies. So why did I decide to go into web design and development? Generally, it’s 
 				because I love to be creative, enjoy talking and collaborating ideas with others, and scripting is just too much fun (till 
 				the bugs come in).</p>
-				
 				<p>Since late 2014, I have been getting back into web design and development by taking various courses at BCIT, learning 
 				the latest web technologies, UI/UX styles, and creating responsive web designs from scratch. Now I feel confident in my 
 				work and abilities to take on professional project work as a front-end web designer. This website I have created is more of a 
 				demonstration of my skills; including imports like bootstrap and angularJS.</p>
-				
 				<p>My objectives are pretty basic: to design and develop more client projects and to gain further experience within the web 
 				development field. I often study and experiment with different web technologies and designs; posting my techniques and 
 				references on my blog. What’s most important is working together with back-end developers and learning more about 
 				developing server-side scripting.</p>
-				
-				<p></p>
 			</section>
 			
-			<section ng-show="panel.tab === 5" class="contact"></section>
+			<section ng-show="panel.tab === 5" class="contact">
+				<div class="contactme">
+					<h2 class="sec-title">CONTACT</h2>
+					<p>Like what you see and want to get in touch? Best way is to sent me an email either via the link
+					below or the contact form.</p>
+					<p>Phone: 778.834.3817<br />
+					Email: <a href="mailto:stjepan@serdeljac.com">stjepan@serdeljac.com</a></p>
+					<div class="social">
+						<a href="https://www.facebook.com/Stjepan.Erdeljac" target="_blank">
+							<div class="social-link" id="facebook"></div>
+						</a>
+						<a href="https://twitter.com/serdeljac" target="_blank">
+							<div class="social-link" id="twitter"></div>
+						</a>
+						<a href="https://plus.google.com/106384036117874570326" target="_blank">
+							<div class="social-link" id="googleplus"></div>
+						</a>
+						<a href="https://ca.linkedin.com/in/stjepan-erdeljac-66bba354" target="_blank">
+							<div class="social-link" id="linkedin"></div>
+						</a>
+					</div>
+				</div>
+			
+				<form name="contactform" method="post" action="scripts/contact.php" class="contact-form">
+					<div>
+						<label for="name">Name:</label><br />
+						<input type="text" name="name" id="name">
+					</div>
+					<div>
+						<label for="comp">Company (optional):</label><br />
+						<input type="text" name="comp" id="comp">
+					</div>
+					<div>
+						<label for="email">Email:</label><br />
+						<input type="email" name="email" placeholder="xxx@web.com" id="email">
+					</div>
+					<div>
+						<label for="phone">Phone:</label><br />
+						<input type="tel" name="phone" placeholder="xxx-xxx-xxxx" id="phone">
+					</div>
+					<div>
+						<label for="msg">Message:</label><br />
+						<textarea name="msg" rows="3" id="msg"></textarea>
+					</div>
+					<div>
+						<input type="reset" value="Clear" id="clear">
+						<input type="submit" name="submit" value="Submit" id="submit">
+					</div>
+				</form>
+
+			</section>
+			
 		</main>
-		
-		<footer>
-		</footer>
 		
 	</div>
 
