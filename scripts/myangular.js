@@ -5,7 +5,7 @@
   app.controller("PanelController", function() {
 	  
 	//Set initial value on load page
-	this.tab = 3;
+	this.tab = 1;
 	
 	//Change the value of tab based on selection in NAV
 	this.selectTab = function(setTab) {
