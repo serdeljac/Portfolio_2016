@@ -50,7 +50,8 @@ $(document).ready(function() {
 			$('.project-list a').not(this).css("background", "none").css("color", "#000");
 		});
 	};
-	
+	//Set Defaults on page load
+	$('.project-list a:nth-of-type(1)').css("background", " linear-gradient(to right, rgba(0,0,0,0.8) 34%,rgba(0,0,0,0) 100%)").css("color", "#FFF");
 	/* -----------------------------------------------------------------------------------	*/	
 	$('#skills').click(function() {
 		progAnimation();
@@ -59,9 +60,5 @@ $(document).ready(function() {
 	logoHov();
 	skillsHov();
 	projLinks();
-	
-	$(window).resize(function() {
-
-	});
 	
 });
