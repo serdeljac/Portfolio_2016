@@ -106,7 +106,6 @@
 				</table>
 				
 				<h2 class="sec-title">SKILLS</h2>
-				
 				<p>Since late 2014, I have been learning the latest web development technologies and designing <strong>responsive</strong> web page 
 				designs that correspond to today’s UI/UX styles and techniques for both <strong>web and mobile devices</strong>. I’m currently working 
 				towards becoming an effective <strong>full-stack developer</strong> and now am looking to take on project work to hone my skills and learn more on the 
@@ -119,12 +118,9 @@
 				<p>If you require more information, you can view my 
 				<a id="resume" href="StjepanErdeljacResume.pdf" target="_blank">resume</a> 
 				or contact me directly through either e-mail or phone.</p>
-				
-				
-				
+
 			</section>
 			<section ng-show="panel.tab === 3" class="projects" ng-controller="ProjectController as project">
-				
 				<div class="project-list">
 					<img src="img/clickabove.png" alt="Click Below" />
 					<a href="" ng-class="{active: project.isSelected(1)}" ng-click="project.selectTab(1)">Off Campus Media</a>
@@ -138,7 +134,7 @@
 				
 				<div class="project-display">
 					<h2 class="sec-title">PROJECTS</h2>
-
+					
 					<!-- OFFCAMPUS MEDIA -->
 					<div ng-show="project.tab === 1">
 						<img src="img/offcampus.jpg" alt="Off Campus" />
@@ -235,7 +231,9 @@
 			</section>
 			
 			<section ng-show="panel.tab === 4" class="about">
-				<img src="img/stjepan.jpg" alt="profile" />
+				<div class="frame">
+					<img src="img/stjepan.jpg" alt="profile" />
+				</div>
 				<h2 class="sec-title">Stjepan Josip Erdeljac</h2>
 				<p>Keeping it simple, I'm a teck geek who loves custom, dynamic computer systems &amp; interfaces and desires to 
 				express myself in relation to web technologies. So why did I decide to go into web design and development? Generally, it’s 
@@ -300,21 +298,10 @@
 						<input type="submit" name="submit" value="Submit" id="submit">
 					</div>
 				</form>
-
 			</section>
-			
 		</main>
-		
 	</div>
 
-
-
-
-
-
-  
-  
-	
 	<script src="scripts/java.js"></script>
 </body>
 </html>

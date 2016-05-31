@@ -52,6 +52,30 @@ $(document).ready(function() {
 	};
 	//Set Defaults on page load
 	$('.project-list a:nth-of-type(1)').css("background", " linear-gradient(to right, rgba(0,0,0,0.8) 34%,rgba(0,0,0,0) 100%)").css("color", "#FFF");
+	
+	//Skews the documents based on mouse movement
+	var bodyH = $(window).innerHeight();
+	$('body').height(bodyH);
+	
+	function contentAnimate() {
+	$("body").mousemove(function(myevent) {
+		var setX =((myevent.pageX) / $(window).width())-.5;
+		var setY =((myevent.pageY) / $(window).width())-.5;
+		var relativeX = -Math.round(setX * 100)*.000004;
+		var relativeY = -Math.round(setY * 100)*.000004;
+		var selectMain = $('main, main .traits, main h1');
+		var selectSub = $('img');
+	
+		if($(window).innerWidth() > 700) {
+			selectMain.css('transform', 'matrix3d(1,0,0,' + relativeX  + ',0,1,0,' + relativeY  + ',0,0,1,0,0,0,0,1');
+			selectSub.css('transform', 'matrix3d(1,0,0,' + relativeX  + ',0,1,0,' + relativeY  + ',0,0,1,0,0,0,0,1');
+		} else {
+			selectMain.css('transform', 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1');
+			selectSub.css('transform', 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1');
+		}
+	});
+	};
+	
 	/* -----------------------------------------------------------------------------------	*/	
 	$('#skills').click(function() {
 		progAnimation();
@@ -60,5 +84,6 @@ $(document).ready(function() {
 	logoHov();
 	skillsHov();
 	projLinks();
+	contentAnimate();
 	
 });
