@@ -55,7 +55,7 @@ $(document).ready(function() {
 	
 	//Skews the documents based on mouse movement
 	var bodyH = $(window).innerHeight();
-	$('body').height(bodyH);
+	$('body').height(bodyH - 20);
 	
 	function contentAnimate() {
 	$("body").mousemove(function(myevent) {
