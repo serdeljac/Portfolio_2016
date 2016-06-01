@@ -41,6 +41,8 @@ section {
 	overflow: hidden;
 	}
 	
+.home {margin-top: 20px;}
+	
 .sec-title {
 	text-align: center;
 	font: bold 3.5em georgia, "Times New Roman";
