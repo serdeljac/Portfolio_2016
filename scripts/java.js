@@ -61,8 +61,8 @@ $(document).ready(function() {
 	$("body").mousemove(function(myevent) {
 		var setX =((myevent.pageX) / $(window).width())-.5;
 		var setY =((myevent.pageY) / $(window).width())-.5;
-		var relativeX = -Math.round(setX * 100)*.000004;
-		var relativeY = -Math.round(setY * 100)*.000004;
+		var relativeX = -Math.round(setX * 100)*.000003;
+		var relativeY = -Math.round(setY * 100)*.000003;
 		var selectMain = $('main, main .traits, main h1');
 		var selectSub = $('img');
 	
