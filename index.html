@@ -1,307 +1,206 @@
 <!DOCTYPE html>
-<html lang="en-us" ng-app="portnav">
+<html lang="en-us" >
 <head>
 	<meta charset="utf-8" />
-	<title>Stjepan Erdeljac Portfolio</title>
-	<meta name="description" content="Stjepan Erdeljac is a junior web designer in search for a career in 	web development and design.
-										He is primarily looking into building a strong foundation and is seeking clients or a full time
-										position in front-end web development and design." />
-	<meta name="viewport" content="width=device-width, initial-scale=1, ">
-	<link href="img/logo.jpg" rel="shortcut icon">
-	<!-- SCRIPTS CDN's -->
+	<title>Stjepan Erdeljac Front-End Web</title>
+	<meta name="description" content="A junior web designer seeking a career in front-end web design and development." />
+	<link type="image/x-icon" href="img/logo.jpg" rel="shortcut icon">
+	<meta name="viewport" content="initial-*scale=1.0, width=device-width" />
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-	<!-- LOCAL Scripts-->
 	<script type="text/javascript" src="scripts/myangular.js"></script>
+	<link rel="stylesheet" href="css/stj_animation.css" media="all"/>
 	<link rel="stylesheet" href="css/style.css" title="Default CSS" media="all"/>
 	<link rel="stylesheet" href="css/print.css" media="print"/>
-	
+
 </head>
 <body>
-	<hr />
-	<div class="container" ng-controller="PanelController as panel">
-		<nav id="set">
-			<button ng-class="{active: panel.isSelected(1)}" ng-click="panel.selectTab(1)" class=" btn" id="home" type="submit">Home</button>
-			<button ng-class="{active: panel.isSelected(2)}" ng-click="panel.selectTab(2)" class="btn" id="skills" type="submit" >Skills</button>
-			<button ng-class="{active: panel.isSelected(3)}" ng-click="panel.selectTab(3)" class="btn" type="submit">Projects</button>
-			<a href="" ng-click="panel.selectTab(1)" class="logo"><img src="img/logo.jpg" alt="Logo" /></a>
-			<button ng-class="{active: panel.isSelected(4)}" ng-click="panel.selectTab(4)" class="btn" type="submit">About</button>
-			<button ng-class="{active: panel.isSelected(5)}" ng-click="panel.selectTab(5)" class="btn" type="submit">Contact</button>
-		</nav>
+	<img src="img/hamb.png" alt="Menu" class="inactive hambmenu"/>
+	<nav>
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+		<div class="socialmedia">
+			<a href="https://www.facebook.com/Stjepan.Erdeljac" target="_blank"><div class="sprite facebook"></div></a>
+			<a href="https://twitter.com/serdeljac" target="_blank"><div class="sprite twitter"></div></a>
+			<a href="https://plus.google.com/106384036117874570326" target="_blank"><div class="sprite googleplus"></div></a>
+			<a href="https://ca.linkedin.com/in/stjepan-erdeljac-66bba354" target="_blank"><div class="sprite linkedin"></div></a>
+			<a href="https://wordpress.com/stats/insights/serdeljac.wordpress.com" target="_blank"><div class="sprite wordpress"></div></a>
+		</div>
+	</nav>
+	
+	
+	
+	<div class="dir-left"></div>
+	<div class="dir-right"></div>
+	
+	<a href="mailto:stjepan@serdeljac.com">
+	<div class="qemail">STJEPAN JOSIP ERDELJAC</div></a>
 
-		<main>
-			<section ng-show="panel.tab === 1" class="home">
-				<h1>FRONT-END WEB DESIGNER</h1>
-				<div class="traits">
-					<h2>Creative</h2>
-					<h2>Innovative</h2>
-					<h2>Ready to work</h2>
-				</div>
-			</section>
-			
-			<section ng-show="panel.tab === 2" class="skills">
-				<table id="skills-tbl" class="table table-hover">
-					<tr>
-						<td>HTML5</td>
-						<td><img src="img/progress.png" class="prg-html5" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>XML/XSLT</td>
-						<td><img src="img/progress.png" class="prg-xml" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>CSS3</td>
-						<td><img src="img/progress.png" class="prg-css3" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td class="skill-sub">Bootstrap</td>
-						<td><img src="img/progress.png" class="prg-bootstrap" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>JavaScript</td>
-						<td><img src="img/progress.png" class="prg-javascript" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td class="skill-sub">jQuery</td>
-						<td><img src="img/progress.png" class="prg-jquery" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td class="skill-sub">AngularJS</td>
-						<td><img src="img/progress.png" class="prg-angularjs" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>PHP</td>
-						<td><img src="img/progress.png" class="prg-php" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>Adobe Photoshop</td>
-						<td><img src="img/progress.png" class="prg-photoshop" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>Microsoft Office</td>
-						<td><img src="img/progress.png" class="prg-office" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>GitHub</td>
-						<td><img src="img/progress.png" class="prg-github" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>Wordpress</td>
-						<td><img src="img/progress.png" class="prg-wordpress" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>Windows 7, 8.1, 10</td>
-						<td><img src="img/progress.png" class="prg-windows" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>MacOSX 10.10</td>
-						<td><img src="img/progress.png" class="prg-mac" alt="prg" /></td>
-					</tr>
-					<tr>
-						<td>Ubuntu 14.04</td>
-						<td><img src="img/progress.png" class="prg-ubuntu" alt="prg" /></td>
-					</tr>
-				</table>
-				
-				<h2 class="sec-title">SKILLS</h2>
-				<p>Since late 2014, I have been learning the latest web development technologies and designing <strong>responsive</strong> web page 
-				designs that correspond to today’s UI/UX styles and techniques for both <strong>web and mobile devices</strong>. I’m currently working 
-				towards becoming an effective <strong>full-stack developer</strong> and now am looking to take on project work to hone my skills and learn more on the 
-				industry from within.</p>
-				
-				<p>This site that I have created is an introduction to my skill set, a demonstration of my techniques, and an excellent 
-				way to get in touch with me that may be of your interest. To view further in depth of my development style, you can 
-				<a href="https://github.com/sheppard121/Portfolio_2016/" target="_blank">	download my portfolio from GitHub.</a></p>
-				
-				<p>If you require more information, you can view my 
-				<a id="resume" href="StjepanErdeljacResume.pdf" target="_blank">resume</a> 
-				or contact me directly through either e-mail or phone.</p>
+	
+	<main>
+		<!-- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] -->
+		<section id="home">
+			<div class="container">
 
-			</section>
-			<section ng-show="panel.tab === 3" class="projects" ng-controller="ProjectController as project">
-				<div class="project-list">
-					<img src="img/clickabove.png" alt="Click Below" />
-					<a href="" ng-class="{active: project.isSelected(1)}" ng-click="project.selectTab(1)">Off Campus Media</a>
-					<a href="" ng-class="{active: project.isSelected(2)}" ng-click="project.selectTab(2)">Group Final Project</a>
-					<a href="" ng-class="{active: project.isSelected(3)}" ng-click="project.selectTab(3)">Javascript Matching Game</a>
-					<a href="" ng-class="{active: project.isSelected(4)}" ng-click="project.selectTab(4)">Spencer Soares Portal</a>
-					<a href="" ng-class="{active: project.isSelected(5)}" ng-click="project.selectTab(5)">LiveMuse Simulation App</a>
-					<a href="" ng-class="{active: project.isSelected(6)}" ng-click="project.selectTab(6)">My portfolio (2015)</a>
-					<a href="" ng-class="{active: project.isSelected(7)}" ng-click="project.selectTab(7)">My portfolio (2016) <span>*new</span></a>
+				<h1 class="displayTitle">FrontEndWebDesigner</h1>
+				<hr class="titlehr"/>
+				<div class="intro">
+					<h2>Looking to hire?</h2>
+					<hr />
+					<p>Everyday new web pages are being developed and you may ask 
+					yourself: what appeals to my target audience? How can the user’s 
+					experience increase my business? And will it be responsive for 
+					mobile and other devices? As a front-end designer these are the 
+					first considerations among many that we focus before the process 
+					of development.</p>
+					<p>Take a look around my portfolio and see what I’ve done thus far. 
+					I blog some of my discoveries and work on 
+					<a href="https://wordpress.com/stats/insights/serdeljac.wordpress.com" target="_blank">
+					Wordpress</a> as both a way to demonstrate my ideas and keep 
+					references that others may use. Visit my contacts section if you want 
+					to get in touch.</p>
 				</div>
-				
-				<div class="project-display">
-					<h2 class="sec-title">PROJECTS</h2>
-					
-					<!-- OFFCAMPUS MEDIA -->
-					<div ng-show="project.tab === 1">
-						<img src="img/offcampus.jpg" alt="Off Campus" />
-						<p>My first website using all the basics of HTML, CSS, and PHP. The key purpose is to 
-						learn effective use of proper scripting, and the use of a variety of CSS3 attributes to make 
-						a presentable web page.</p>
-						<hr />
-						<ul>
-							<li><a href="http://offcampusmedia.serdeljac.com/" target="_blank">View the site</a></li>
-							<li><a href="https://github.com/sheppard121/Off_Campus_Media/" target="_blank">Download from GitHub</a></li>
-						</ul>
-					</div>
-					
-					<!-- GROUP FINAL PROJECT -->
-					<div ng-show="project.tab === 2">
-						<img src="img/groupfinal.jpg" alt="Group Final Project" />
-						<p>Not all projects are done individually. This assignment was designed to collaborate 
-						and develop a site by assigning each team member a task and merge together the HTML, 
-						CSS, and JavaScript scripts. The end result is to create a basic, functional lecture website 
-						with everyone’s input.</p>
-						<hr />
-						<ul>
-							<li><a href="http://groupfinal.serdeljac.com/" target="_blank">View the site</a></li>
-						</ul>
-					</div>
-					
-					<!-- JAVASCRIPT MATCHING GAME -->
-					<div ng-show="project.tab === 3">
-						<img src="img/javascriptgame.jpg" alt="JavaScript Game" />
-						<p>This is not the most interesting game; the purpose was to test and experiment with 
-						JavaScript functions, arrays, and loops and create a fully functional game. I relied mostly 
-						on using pure JavaScript (not jQuery) in my script.</p>
-						<hr />
-						<ul>
-							<li><a href="http://javascriptgame.serdeljac.com" target="_blank">View the site</a></li>
-							<li><a href="https://github.com/sheppard121/JavaScript_Matching_Game/" target="_blank">Download from GitHub</a></li>
-						</ul>
-					</div>
-					
-					<!-- SPENCER SOARES PORTAL SITE -->
-					<div ng-show="project.tab === 4">
-						<img src="img/spencerportal.jpg" alt="Spencer Portal Site" />
-						<p>A portfolio project belonging to a client of mine. It involved several meetings 
-						where we discussed layout options and critique, as well as constant communication 
-						involving our next meeting, progress, and making changes/additions to the site.</p>
-						<hr />
-						<ul>
-							<li><a href="http://www.spencersoares.com/" target="_blank">View the site</a></li>
-							<li><a href="https://github.com/serdeljac/Spencer_Portal_Site" target="_blank">Download from GitHub</a></li>
-						</ul>
-					</div>
-					
-					<!-- LIVEMUSE PROTOPTYPE APP -->
-					<div ng-show="project.tab === 5">
-						<img src="img/prototypeapp.jpg" alt="Prototype App" />
-						<p>This is not an actual website, but a simulation of a smart-phone app. Basically I used 
-						my web design skills to create and design an interactive app, then use it to gather data
-						from other users to seek out possible faults in user interface or experience, and adjust 
-						accordingly. The sole purpose is to gain experience collecting user data and inputs, 
-						collaborate results, apply changes, and test with other users.</p>
-						<hr />
-						<ul>
-							<li><a href="http://livemuseapp.serdeljac.com" target="_blank">View the site</a></li>
-						</ul>
-					</div>
-					
-					<!-- PORTFOLIO SITE 2015 -->
-					<div ng-show="project.tab === 6">
-						<img src="img/portfolio2015.jpg" alt="Portfolio 2015" />
-						<p>An older version of my portfolio that was scripted from scratch with no bootstrap or
-						angularJS. Compared to the current one, this page lacked a demonstration of most of my 
-						skills, however it is much more interactive. </p>
-						<hr />
-						<ul>
-							<li><a href="http://portfolio2015.serdeljac.com" target="_blank">View the site</a></li>
-							<li><a href="https://github.com/serdeljac/Portfolio_2015" target="_blank">Download from GitHub</a></li>
-						</ul>
-					</div>
-					
-					<!-- PORTFOLIO SITE 2016 -->
-					<div ng-show="project.tab === 7">
-						<img src="img/portfolio2016.jpg" alt="Portfolio 2016" />
-						<p>Current portfolio project that uses angularJS and Bootstrap. Compared to my 2015 
-						version, I have added more details on my work and optimized the images further for 
-						quick loading. Also thanks to Bootstrap and some of my own CSS @media features, I 
-						have made my site more responsive to various devices.</p>
-						<hr />
-						<ul>
-							<li><a href="https://github.com/serdeljac/Portfolio_2016" target="_blank">Download from GitHub</a></li>
-						</ul>
-					</div>
+				<div class="myresume">
+					<p>I am currently available for employment for a full-time or contract
+					position. For further info, you can <a href="StjepanErdeljacResume.pdf">view my resume</a> or contact me directly via 
+					<a href="mailto:stjepan@serdeljac.com">email</a>.</p>
+				</div>
+				<a href="https://github.com/serdeljac" target="_blank">
+					<div class="togithub"></div>
+				</a>
+			</div>
+		</section>
 
+		<!-- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] -->
+		<section id="skills">
+			<div class="container skills">
+				<h2>Skills</h2>
+				<p>In early 2014, I began my studies in web design starting with building a <span>solid
+				foundation</span> in the basics of web development technologies. Soon other web 
+				technologies came into play as I <span>researched and experimented</span> with libraries and 
+				imports. Today, I am purely driven into learning not just creating effective web 
+				styles and optimizations for today’s SEO standards, but also scripting 
+				that aids to back-end web developers. Everyday I’m <span>learning new methods and 
+				technologies</span> to help create a better website.
+				</p>
+				<div class="skillslist">
+					<ul>
+						<li>
+							<span class="sml">XML</span>
+							<span class="med">Wordpress</span>
+							<span class="lrg">HTML</span>
+						</li>
+						<li>
+							<span class="sml">UI</span>
+							<span class="med">Bootstrap</span>
+							<span class="lrg">CSS</span>
+						</li>
+						<li>
+							<span class="med">jQuery</span>
+							<span class="lrg">JavaScript</span>
+						</li>
+						<li>
+							<span class="sml">AngularJS</span>
+							<span class="med">Mobile</span>
+							<span class="lrg">UX</span>
+						</li>
+						<li>
+							<span class="sml">PHP</span>
+							<span class="med">Responsive</span>
+							<span class="lrg">Photoshop</span>
+						</li>
+					</ul>
 				</div>
-			</section>
-			
-			<section ng-show="panel.tab === 4" class="about">
-				<div class="frame">
-					<img src="img/stjepan.jpg" alt="profile" />
+			</div>
+		</section>
+		
+		<!-- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] -->
+		<section id="projects">
+			<div class="container projects">
+				<h2>Projects</h2>
+				<a href="http://www.spencersoares.com/" target="_blank"><div class="tile spencerportal">
+					<div class="tile_hov">SPENCER SOARES PORTAL</div>
+				</div></a>
+				<a href="#project" target="_blank"><div class="tile stjanimations">
+					<div class="tile_hov">STJ ANIMATIONS</div>
+				</div></a>
+				<a href="http://offcampusmedia.serdeljac.com/" target="_blank"><div class="tile offcampus">
+					<div class="tile_hov">OFF CAMPUS MEDIA</div>
+				</div></a>
+				<a href="http://javascriptgame.serdeljac.com/" target="_blank"><div class="tile matchinggame">
+					<div class="tile_hov">MATCHING GAME</div>
+				</div></a>
+				<a href="http://groupfinal.serdeljac.com/" target="_blank"><div class="tile groupfinal">
+					<div class="tile_hov">LECTURE.BCIT</div>
+				</div></a>
+				<a href="http://portfolio2015.serdeljac.com/" target="_blank"><div class="tile portfolio2015">
+					<div class="tile_hov">PORTFOLIO 2015</div>
+				</div></a>
+				
+				
+				
+			 </div>
+		</section>
+		
+		<!-- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] -->
+		<section id="about">
+			<div class="container about">
+				<h2>A little about me...</h2>
+				<div class="text">
+					<div class="profile"></div>
+					<p>Keeping it simple, I'm a tech geek who loves custom, dynamic computer systems &amp; interfaces and desires to express 
+					ingenuity in web technologies. So why did I decide to go into web design and development? Generally, it’s because I love 
+					being creative, enjoy talking and collaborating ideas with others, and scripting is just too much fun (till the bugs come 
+					in).</p>
+					<p>Since late 2014, I have been getting back into web design and development by taking various courses at BCIT, learning 
+					the latest web technologies, UI/UX styles, and creating responsive web designs from scratch. Now I feel confident in my 
+					work and abilities to take on professional project work as a front-end web designer.</p>
+					<hr />
+					<p>My objectives are pretty basic: to design and develop more client projects and to gain further experience within the web 
+					development field. I often study and experiment with different web technologies and designs; posting my techniques and 
+					references on my blog. What’s most important is working together with back-end developers and learning more about 
+					developing server-side scripting.</p>
 				</div>
-				<h2 class="sec-title">Stjepan Josip Erdeljac</h2>
-				<p>Keeping it simple, I'm a teck geek who loves custom, dynamic computer systems &amp; interfaces and desires to 
-				express myself in relation to web technologies. So why did I decide to go into web design and development? Generally, it’s 
-				because I love to be creative, enjoy talking and collaborating ideas with others, and scripting is just too much fun (till 
-				the bugs come in).</p>
-				<p>Since late 2014, I have been getting back into web design and development by taking various courses at BCIT, learning 
-				the latest web technologies, UI/UX styles, and creating responsive web designs from scratch. Now I feel confident in my 
-				work and abilities to take on professional project work as a front-end web designer. This website I have created is more of a 
-				demonstration of my skills; including imports like bootstrap and angularJS.</p>
-				<p>My objectives are pretty basic: to design and develop more client projects and to gain further experience within the web 
-				development field. I often study and experiment with different web technologies and designs; posting my techniques and 
-				references on my blog. What’s most important is working together with back-end developers and learning more about 
-				developing server-side scripting.</p>
-			</section>
-			
-			<section ng-show="panel.tab === 5" class="contact">
-				<div class="contactme">
-					<h2 class="sec-title">CONTACT</h2>
-					<p>Like what you see and want to get in touch? Best way is to sent me an email either via the link
-					below or the contact form.</p>
-					<p>Phone: 778.834.3817<br />
-					Email: <a href="mailto:stjepan@serdeljac.com">stjepan@serdeljac.com</a></p>
-					<div class="social">
-						<a href="https://www.facebook.com/Stjepan.Erdeljac" target="_blank">
-							<div class="social-link" id="facebook"></div>
-						</a>
-						<a href="https://twitter.com/serdeljac" target="_blank">
-							<div class="social-link" id="twitter"></div>
-						</a>
-						<a href="https://plus.google.com/106384036117874570326" target="_blank">
-							<div class="social-link" id="googleplus"></div>
-						</a>
-						<a href="https://ca.linkedin.com/in/stjepan-erdeljac-66bba354" target="_blank">
-							<div class="social-link" id="linkedin"></div>
-						</a>
-					</div>
-				</div>
-			
+			</div>
+		</section>
+		
+		<!-- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] -->
+		<section id="contact">
+			<div class="container contact">
+				<h2>Contact Me</h2>
 				<form name="contactform" method="post" action="scripts/contact.php" class="contact-form">
-					<div>
-						<label for="name">Name:</label><br />
-						<input type="text" name="name" id="name">
+					<div class="form">
+						<div><label for="name">Name:</label><input type="text" name="name" id="name"></div>
+						<div><label for="comp">Company:</label><input type="text" name="comp" id="comp"></div>
+						<div><label for="email">Email:</label><input type="email" name="email" id="email"></div>
+						<div><label for="phone">Phone:</label><input type="tel" name="phone" id="phone"></div>
+						<div><label for="msg">Message:</label><textarea name="msg" rows="3" id="msg"></textarea></div>
 					</div>
-					<div>
-						<label for="comp">Company (optional):</label><br />
-						<input type="text" name="comp" id="comp">
-					</div>
-					<div>
-						<label for="email">Email:</label><br />
-						<input type="email" name="email" placeholder="xxx@web.com" id="email">
-					</div>
-					<div>
-						<label for="phone">Phone:</label><br />
-						<input type="tel" name="phone" placeholder="xxx-xxx-xxxx" id="phone">
-					</div>
-					<div>
-						<label for="msg">Message:</label><br />
-						<textarea name="msg" rows="3" id="msg"></textarea>
-					</div>
-					<div>
-						<input type="reset" value="Clear" id="clear">
-						<input type="submit" name="submit" value="Submit" id="submit">
+					<div class="buttons">
+						<input type="reset" value="Clear" class="clear">
+						<input type="submit" name="submit" value="Submit" class="submit">
 					</div>
 				</form>
-			</section>
-		</main>
-	</div>
+				<div class="otherContect">
+					<p>There's more than one way to get in touch with me. Give me a call
+					or a personal email directly. </p>
+					<hr />
+					<div>Phone: 778.834.3817</div>
+					<div>Email: <a href="mailto:serdeljac88@gmail.com">serdeljac88@gmail.com</a></div>
+				</div>
+			</div>
+		</section>
 
+	</main>
+	
 	<script src="scripts/java.js"></script>
+	<script src="scripts/stj_animation.js"></script>
 </body>
 </html>

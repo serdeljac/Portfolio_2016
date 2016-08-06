@@ -1,89 +1,165 @@
 $(document).ready(function() {
-	//Logo hover image 
-	function logoHov() {
-		$('.logo').hover(
+
+	//Variables for Section
+	var home = $('section:nth-of-type(1)');
+	var skills = $('section:nth-of-type(2)');
+	var projects = $('section:nth-of-type(3)');
+	var about = $('section:nth-of-type(4)');
+	var contact = $('section:nth-of-type(5)');
+	//Variables for Navigation
+	var nav_home = $('nav ul li:nth-of-type(1) a');
+	var nav_skills = $('nav ul li:nth-of-type(2) a');
+	var nav_projects = $('nav ul li:nth-of-type(3) a');
+	var nav_about = $('nav ul li:nth-of-type(4) a');
+	var nav_contact = $('nav ul li:nth-of-type(5) a');
+	//For default CSS Styles
+	var nav = $('nav ul li a');	
+	nav_home.css("color", "#fff");
+
+	
+	//Detect if browser is IE
+	function checkIE() {
+		var ms = window.navigator.userAgent.indexOf("MSIE ");
+		if (ms > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  
+		{	$('html').addClass('ie');    }
+		return false;
+	};
+
+	//Reveals the project name and centers text
+	function projHov() {
+		$('.tile').hover(
 			function() {
-				$('.logo img').attr("src", "img/logohov.jpg");
+				$(this).children('.tile_hov').fadeIn();
 			},
 			function() {
-				$('.logo img').attr("src", "img/logo.jpg");
+				$(this).children('.tile_hov').fadeOut();
 			}
 		);
 	};
 	
-	//Animates the skills progress when active
-	function progAnimation() {
-		$('.prg-html5').width("95%");
-		$('.prg-xml').width("80%");
-		$('.prg-css3').width("85%");
-		$('.prg-bootstrap').width("70%");
-		$('.prg-javascript').width("75%");
-		$('.prg-jquery').width("80%");
-		$('.prg-angularjs').width("40%");
-		$('.prg-php').width("30%");
-		$('.prg-photoshop').width("75%");
-		$('.prg-office').width("85%");
-		$('.prg-github').width("70%");
-		$('.prg-wordpress').width("80%");
-		$('.prg-windows').width("95%");
-		$('.prg-mac').width("80%");
-		$('.prg-ubuntu').width("30%");
-	};
-	
-	//Hover effect over each skill set
-	function skillsHov() {
-		$('#skills-tbl tr').hover(
-			function() {
-				$(this).children("td").children("img").attr("src", "img/progresshov.png");
-			},
-			function() {
-				$(this).children("td").children("img").attr("src", "img/progress.png");
+	function chngSec() {
+		$('.dir-right').click(function() {
+			nav.removeAttr('style');
+			$('section').fadeOut(200);
+			if (home.css("display") === 'block') {
+				skills.fadeIn(200);
+				nav_skills.css("color", "#fff");
+			} else if (skills.css("display") === 'block') {
+				projects.fadeIn(200);
+				nav_projects.css("color", "#fff");
+			} else if (projects.css("display") === 'block') {
+				about.fadeIn(200);
+				nav_about.css("color", "#fff");
+			} else if (about.css("display") === 'block') {
+				contact.fadeIn(200);
+				nav_contact.css("color", "#fff");
+			}else {
+				home.fadeIn(200);
+				nav_home.css("color", "#fff");
 			}
-		);
-	};
-	
-	//Keeps the project link active when selected
-	function projLinks() {
-		$('.project-list a').click(function() {
-			$(this).css("background", " linear-gradient(to right, rgba(0,0,0,0.8) 34%,rgba(0,0,0,0) 100%)")
-						.css("color", "#FFF");
-			$('.project-list a').not(this).css("background", "none").css("color", "#000");
+		});
+		
+		$('.dir-left').click(function() {
+			nav.removeAttr('style');
+			$('section').fadeOut(200);
+			if (contact.css("display") === 'block') {
+				about.fadeIn(200);
+				nav_about.css("color", "#fff");
+			} else if (about.css("display") === 'block') {
+				projects.fadeIn(200);
+				nav_projects.css("color", "#fff");
+			} else if (projects.css("display") === 'block') {
+				skills.fadeIn(200);
+				nav_skills.css("color", "#fff");
+			} else if (skills.css("display") === 'block') {
+				home.fadeIn(200);
+				nav_home.css("color", "#fff");
+			} else {
+				contact.fadeIn(200);
+				nav_contact.css("color", "#fff");
+			}
 		});
 	};
-	//Set Defaults on page load
-	$('.project-list a:nth-of-type(1)').css("background", " linear-gradient(to right, rgba(0,0,0,0.8) 34%,rgba(0,0,0,0) 100%)").css("color", "#FFF");
 	
-	//Skews the documents based on mouse movement
-	var bodyH = $(window).innerHeight();
-	$('body').height(bodyH - 20);
-	
-	function contentAnimate() {
-	$("body").mousemove(function(myevent) {
-		var setX =((myevent.pageX) / $(window).width())-.5;
-		var setY =((myevent.pageY) / $(window).width())-.5;
-		var relativeX = -Math.round(setX * 100)*.000003;
-		var relativeY = -Math.round(setY * 100)*.000003;
-		var selectMain = $('main, main .traits, main h1');
-		var selectSub = $('img');
-	
-		if($(window).innerWidth() > 700) {
-			selectMain.css('transform', 'matrix3d(1,0,0,' + relativeX  + ',0,1,0,' + relativeY  + ',0,0,1,0,0,0,0,1');
-			selectSub.css('transform', 'matrix3d(1,0,0,' + relativeX  + ',0,1,0,' + relativeY  + ',0,0,1,0,0,0,0,1');
-		} else {
-			selectMain.css('transform', 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1');
-			selectSub.css('transform', 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1');
-		}
-	});
+	function navClick() {
+		nav_home.click(function() {
+			nav.removeAttr('style');
+			nav_home.css("color", "#fff");
+			$('section').fadeOut();
+			home.fadeIn();
+		});
+		
+		nav_skills.click(function() {
+			nav.removeAttr('style');
+			nav_skills.css("color", "#fff");
+			$('section').fadeOut();
+			skills.fadeIn();
+		});
+		
+		nav_projects.click(function() {
+			nav.removeAttr('style');
+			nav_projects.css("color", "#fff");
+			$('section').fadeOut();
+			projects.fadeIn();
+		});
+		
+		nav_about.click(function() {
+			nav.removeAttr('style');
+			nav_about.css("color", "#fff");
+			$('section').fadeOut();
+			about.fadeIn();
+		});
+		
+		nav_contact.click(function() {
+			nav.removeAttr('style');
+			nav_contact.css("color", "#fff");
+			$('section').fadeOut();
+			contact.fadeIn();
+		});
 	};
 	
-	/* -----------------------------------------------------------------------------------	*/	
-	$('#skills').click(function() {
-		progAnimation();
+	function subnav() {
+		$('.hambmenu').click(function() {
+			if ($(this).hasClass("inactive")) {
+				$(this).removeClass("inactive");
+				//$('main').css("left", "200px");
+				$('nav').css("transition", "all .23s ease").css("left", "0px");
+			}else{
+				$(this).addClass("inactive");
+				//$('main').css("left", "0px");
+				//$('main').removeAttr('style');
+				//$('nav').css("left", "-200px");
+				$('nav').removeAttr('style');
+			}
+		});
+		$('nav ul li a').click(function() {
+			if ($(window).width() < 768) {
+				$('.hambmenu').addClass("inactive");
+				$('main').removeAttr('style');
+				$('nav').removeAttr('style');
+			}else {
+				return false;
+			}
+		});
+		
+		
+	};
+	
+
+	checkIE();
+	subnav();
+	projHov();
+	navClick();
+	chngSec();
+	
+	
+	//Changes initial value when window size changes
+	$(window).resize(function() {
+
 	});
 	
-	logoHov();
-	skillsHov();
-	projLinks();
-	contentAnimate();
+	//Changes when scrolled to certain point
+	$(window).scroll(function() {
+	});
 	
 });
